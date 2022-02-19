@@ -1,0 +1,11 @@
+<div class="container">
+  <h3><u>Please upload a csv file of users</u></h3>
+  <%= form_with url: "/upload", multipart: true, method: :post, local: false do
+  |form| %> <%= form.file_field :csv_file %> <%= form.submit "Upload CSV" %> <%
+  end %>
+
+  <div class="upload-result">
+    <p id="msg"></p>
+    <ul id="users"></ul>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+const result = <%= @result_array.inspect.html_safe %>
+const userList = (user, index) => {
+    return `
+        <li>${index+1}. ${user}<li>    
+    `
+}
+
+document.getElementById("users").innerHTML = `${result.map(userList).join('')}`;
